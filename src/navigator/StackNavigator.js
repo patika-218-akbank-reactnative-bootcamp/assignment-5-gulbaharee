@@ -11,7 +11,7 @@ const StackNavigator =()=>{
             <NavigationContainer>
                 <Stack.Navigator>
                     <Stack.Screen name='Sign In' options={{headerShown:false}} component={SignIn}/>
-                    <Stack.Screen name='Sign Up' component={SignUp}/>
+                    <Stack.Screen name='Sign Up' options={{headerShown:false}} component={SignUp}/>
                 </Stack.Navigator>
             </NavigationContainer>
     )
