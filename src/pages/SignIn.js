@@ -12,7 +12,7 @@ const SignIn = () => {
     <View style={styles.container}>
       <Input placeholder="Username" />
       <Input placeholder="Password" />
-      <Button placeholder="Sign In" />
+      <Button placeholder="Sign In" onPress={()=>navigate('Router')}/>
       <Pressable onPress={()=>navigate('Sign Up')}>
         <Text style={styles.text}>Do not have an account?</Text>
       </Pressable>
