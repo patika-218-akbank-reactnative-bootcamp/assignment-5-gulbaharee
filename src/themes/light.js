@@ -3,5 +3,6 @@ export default {
     backgroundColor: 'white',
     textColor:'black',
     lineColor:'gray',
-    //secondaryColor:'rgb(250,239,239)',
+    buttonColor:'#adb5bd',
+    tabColor:'#e9ecef',
 };

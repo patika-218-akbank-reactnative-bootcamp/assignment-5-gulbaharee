@@ -1,26 +1,28 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import Playlist from "../components/Playlist";
+import { View, Text, StyleSheet,Dimensions } from "react-native";
+import PlaylistBox from "../components/PlaylistBox";
 import { useDispatch, useSelector } from "react-redux";
 import SongBox from "../components/SongBox";
 
+const screenHeight = Dimensions.get('screen').height;
 const Home = () => {
+  const theme = useSelector(state => state.theme.activeTheme);
   return (
-    <View>
-      <Text style={styles.title}>Playlists</Text>
+    <View style={{backgroundColor:theme.backgroundColor}}>
+      <Text style={[styles.title,{textColor:theme.textColor}]}>Playlists</Text>
       <View style={styles.containerCategories}>
         <View style={styles.header}>
-          <Playlist placeholder={"test"} />
-          <Playlist />
-          <Playlist />
+          <PlaylistBox placeholder={"test"} />
+          <PlaylistBox />
+          <PlaylistBox />
         </View>
         <View style={styles.header}>
-          <Playlist />
-          <Playlist />
-          <Playlist />
+          <PlaylistBox />
+          <PlaylistBox />
+          <PlaylistBox />
         </View>
       </View>
-      <Text style={styles.title}>New Releases</Text>
+      <Text style={[styles.title,{textColor:theme.textColor}]}>New Releases</Text>
       <View style={styles.containerList}>
         <SongBox song={"song"}/>
         <SongBox song={"song"}/>
@@ -52,4 +54,7 @@ const styles = StyleSheet.create({
     margin: 30,
     paddingTop: 30,
   },
+  continer:{
+    height:screenHeight,
+  }
 });

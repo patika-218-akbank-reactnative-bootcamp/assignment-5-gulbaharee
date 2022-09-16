@@ -1,9 +1,12 @@
 import React from "react";
 import { View, StyleSheet, Pressable, Text } from "react-native";
+import {useSelector } from "react-redux";
 
-const Playlist = ({ placeholder }) => {
+const PlaylistBox = ({ placeholder }) => {
+  const theme = useSelector(state => state.theme.activeTheme);
+
   return (
-    <View style={styles.container}>
+    <View style={[styles.container,{backgroundColor:theme.buttonColor}]}>
       <Pressable>
         <Text style={styles.text}>{placeholder}</Text>
       </Pressable>
@@ -11,7 +14,7 @@ const Playlist = ({ placeholder }) => {
   );
 };
 
-export default Playlist;
+export default PlaylistBox;
 
 const styles = StyleSheet.create({
   container: {

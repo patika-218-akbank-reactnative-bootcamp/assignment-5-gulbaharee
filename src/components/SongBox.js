@@ -1,11 +1,13 @@
 import React from "react";
 import { View, StyleSheet, Pressable, Text } from "react-native";
 import { Entypo } from "@expo/vector-icons";
+import {useSelector } from "react-redux";
 
 const SongBox = ({ song }) => {
+  const theme = useSelector(state => state.theme.activeTheme);
   return (
     <Pressable >
-      <View style={styles.container}>
+      <View style={[styles.container,{backgroundColor:theme.buttonColor}]}>
         <View style={styles.innercontainer}>
           <Text style={styles.text}>{song}</Text>
           <Entypo name="heart-outlined" size={24} color="black" />

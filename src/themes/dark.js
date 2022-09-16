@@ -1,7 +1,8 @@
 
 export default {
     type:'dark',
-    backgroundColor: 'rgb(96,96,96)',
+    backgroundColor: '#343a40',
     textColor:'white',
-    secondaryColor:'rgb(192,192,192)',
+    buttonColor:'#adb5bd',
+    tabColor:'#adb5bd',
 };
