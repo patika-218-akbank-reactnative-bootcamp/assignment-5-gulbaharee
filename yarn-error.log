@@ -1,0 +1,64 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add @react-native-firebase/app
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:JAVA_HOME=/Library/Java/Home:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Users/gulbahar/opt/anaconda3/bin:/Users/gulbahar/opt/anaconda3/condabin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/jsc-android/-/jsc-android-250230.2.1.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141517:19)
+      at Object.onceWrapper (node:events:641:28)
+      at ClientRequest.emit (node:events:527:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:771:9)
+      at Object.onceWrapper (node:events:641:28)
+      at TLSSocket.emit (node:events:539:35)
+      at TLSSocket.Socket._onTimeout (node:net:516:8)
+      at listOnTimeout (node:internal/timers:559:17)
+      at processTimers (node:internal/timers:502:7)
+
+npm manifest: 
+  {
+    "name": "spotifyclone",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "expo start --dev-client",
+      "android": "expo run:android",
+      "ios": "expo run:ios",
+      "web": "expo start --web"
+    },
+    "dependencies": {
+      "@react-native-firebase/app": "^15.4.0",
+      "@react-navigation/bottom-tabs": "^6.3.3",
+      "@react-navigation/native": "^6.0.12",
+      "@react-navigation/native-stack": "^6.8.0",
+      "@reduxjs/toolkit": "^1.8.5",
+      "expo": "~46.0.9",
+      "expo-splash-screen": "~0.16.2",
+      "expo-status-bar": "~1.4.0",
+      "react": "18.0.0",
+      "react-dom": "18.0.0",
+      "react-native": "0.69.5",
+      "react-native-safe-area-context": "4.3.1",
+      "react-native-screens": "~3.15.0",
+      "react-native-web": "~0.18.7"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.9"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
