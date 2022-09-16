@@ -3,12 +3,17 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 import Router from "../pages/Router";
+import Theme from "../pages/Theme";
+import EditPage from "../pages/EditPage";
 import Settings from "../pages/Settings";
 import {Button} from 'react-native';
+import {useSelector} from 'react-redux';
 
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
+  const theme = useSelector(state => state.theme.activeTheme);
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -35,6 +40,14 @@ const StackNavigator = () => {
             ),
           }}
           component={Settings}
+        />
+        <Stack.Screen
+          name="Theme"
+          component={Theme}
+        />
+        <Stack.Screen
+          name="Edit Page"
+          component={EditPage}
         />
       </Stack.Navigator>
     </NavigationContainer>

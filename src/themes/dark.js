@@ -5,4 +5,5 @@ export default {
     textColor:'white',
     buttonColor:'#adb5bd',
     tabColor:'#adb5bd',
+    secondaryColor:'#6c757d'
 };

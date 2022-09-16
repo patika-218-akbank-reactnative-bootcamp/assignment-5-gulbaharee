@@ -24,9 +24,9 @@ const Settings = () => {
           </Text>
           <Text
             style={[styles.button, { backgroundColor: theme.buttonColor }]}
-            onPress={() => navigate("UserEdit")}
+            onPress={() => navigate("Edit Page")}
           >
-            Setting
+            User Informations
           </Text>
         </Pressable>
       </View>
