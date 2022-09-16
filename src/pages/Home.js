@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <View>
       <Text style={styles.title}>Playlists</Text>
-      <View style={styles.container}>
+      <View style={styles.containerCategories}>
         <View style={styles.header}>
           <Playlist placeholder={"test"} />
           <Playlist />
@@ -21,7 +21,8 @@ const Home = () => {
         </View>
       </View>
       <Text style={styles.title}>New Releases</Text>
-      <View style={styles.container}>
+      <View style={styles.containerList}>
+        <SongBox song={"song"}/>
         <SongBox song={"song"}/>
       </View>
     </View>
@@ -36,8 +37,14 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
     display: "flex",
   },
-  container: {
+  containerCategories:{
+    display: "flex",
     flexDirection: "row",
+    marginLeft:25,
+  },
+  containerList: {
+    display: "flex",
+    flexDirection: "column",
     marginLeft:25,
   },
   title: {
