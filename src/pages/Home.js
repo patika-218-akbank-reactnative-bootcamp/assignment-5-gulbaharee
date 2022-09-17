@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { View, Text, StyleSheet,Dimensions } from "react-native";
 import PlaylistBox from "../components/PlaylistBox";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,6 +7,14 @@ import SongBox from "../components/SongBox";
 const screenHeight = Dimensions.get('screen').height;
 const Home = () => {
   const theme = useSelector(state => state.theme.activeTheme);
+  const loggedUser = useSelector((state)=> state.loggedUser.loggedUserInfo);
+
+
+  useEffect(()=>{
+    console.log(loggedUser);
+  })
+
+  
   return (
     <View style={{backgroundColor:theme.backgroundColor}}>
       <Text style={[styles.title,{textColor:theme.textColor}]}>Playlists</Text>

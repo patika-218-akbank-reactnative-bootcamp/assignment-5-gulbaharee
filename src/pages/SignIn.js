@@ -12,14 +12,20 @@ const SignIn = () => {
   const loggedUser = useSelector((state)=> state.loggedUser.loggedUserInfo);
 
 const handleSubmit=()=>{
-  dispatch(setLoginUser());
+  const users={
+    email:email,
+    username:username,
+
+  }
+  dispatch(setLoginUser({loggedUser:users}));
   navigate('Router');
 }
 
   return (
     <View style={styles.container}>
-      <Input placeholder="Username" />
-      <Input placeholder="Password" />
+      <Input placeholder="Username" onChangeText={(text) => (username = text)}/>
+      <Input placeholder="Email" onChangeText={(text) => (email = text)}/>
+      <Input placeholder="Password" onChangeText={(text) => (password = text)}/>
       <Button placeholder="Sign In" onPress={handleSubmit}/>
       <Pressable onPress={()=>navigate('Sign Up')}>
         <Text style={styles.text}>Do not have an account?</Text>
